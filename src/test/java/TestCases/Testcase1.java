@@ -10,12 +10,10 @@ public class Testcase1 {
 	@Test
 	public void register() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
-
-		  WebDriver driver = new ChromeDriver();
+         WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
 		  UserRegistration ur = new UserRegistration(driver);
-		  
 		  ur.clickOnRegister();
 		  ur.entergender();
 		  ur.enterFirsname("harini");

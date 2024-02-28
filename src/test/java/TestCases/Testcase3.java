@@ -20,19 +20,14 @@ public class Testcase3 {
 	
 	public void login() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
-
-		  WebDriver driver = new ChromeDriver();
+          WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
-		  
-		  
 		  UserLogin ul = new  UserLogin(driver);
 		  ul.clickOnLogin();
 		  ul.enterEmailId("tharunivaddi20@gmail.com");
 		  ul.enterPassword("ab@134");
 		  ul.clickOnLoginButton();
-		  
-		  
 		  AddProducts ad= new AddProducts(driver);
 		  ad.clickOnElectronics();
 		  ad.clickOnCameraAndPhoto();

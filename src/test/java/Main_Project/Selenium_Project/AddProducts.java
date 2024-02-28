@@ -31,18 +31,10 @@ WebDriver driver;
 	By searchbutton = By.xpath("//button[@class='button-1 search-box-button']");
 	By Searchproduct= By.xpath("//input[@name='q']");
 	By Logout = By.xpath("//a[@class='ico-logout']");
-	
-	
-	
-	
-	
-	 
 	 public AddProducts(WebDriver driver){
 		this.driver=driver; 
 	}
-	
-	
-   public void clickOnElectronics() {
+	 public void clickOnElectronics() {
 	   driver.findElement(Electronics).click();
    }
    public void clickOnCameraAndPhoto() {
@@ -54,8 +46,6 @@ WebDriver driver;
    public void addItemtocart() {
 	   driver.findElement(Addcart).click();
    }
-   
-  
    public void clickOnCellphone() {
 	   driver.findElement(cellphone).click();
    }
@@ -65,8 +55,7 @@ WebDriver driver;
    public void additemtocart() {
 	   driver.findElement(addcart).click();
    }
-   
-   public void itemAddOrNot() {
+    public void itemAddOrNot() {
 	   driver.findElement(shoppingcart).click(); 
    }
    public void scrollthepage() {
@@ -79,23 +68,16 @@ WebDriver driver;
    public void clickonsearchbutton() {
 	   driver.findElement(searchbutton).click();
    }
-   
-  
-   public void listtheproducts() {
+  public void listtheproducts() {
 	  String apple=driver.findElement(By.xpath("//*[text()='Apple MacBook Pro 13-inch']")).getText();
 	  String appleproduct = driver.findElement(By.xpath("//*[text()='Apple iCam']")).getText();
 	  System.out.println(apple);
 	  System.out.println(appleproduct);
-	  
-   }
-   
-   
+	  }
    public void searchtheproduct() {
 	   driver.findElement(Searchproduct).sendKeys("Elegant Gemstone Necklace (rental)");
 	   driver.findElement(searchbutton).click();
    }
-   
-   
    public void screenshot() throws IOException {
 	   TakesScreenshot screenshots=(TakesScreenshot)driver;
 	    File file= screenshots.getScreenshotAs(OutputType.FILE);

@@ -11,12 +11,9 @@ public class UserRegistration {
 		By Password= By.name("Password");
 		By ConfirmPassword= By.name("ConfirmPassword");
 		By register= By.name("register-button");
-		
-		
 		   public UserRegistration(WebDriver driver){
 			this.driver= driver;
 		}
-		
 		public void clickOnRegister() {
 			driver.findElement(registerlink).click();
 		}

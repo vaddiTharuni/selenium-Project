@@ -25,12 +25,9 @@ public class UserLogin {
 	 By phomenumber= By.id("Address_PhoneNumber");
 	 By save = By.xpath("//button[@class='button-1 save-address-button']");
 	 By Logout = By.xpath("//a[@class='ico-logout']");
-			 
-			
 	public UserLogin(WebDriver driver){
-		this.driver= driver;
+	this.driver= driver;
 	}
-	
 	public void clickOnLogin() {
 		driver.findElement(LoginButton).click();
 	}
@@ -43,25 +40,18 @@ public class UserLogin {
 	public void clickOnLoginButton() {
 		driver.findElement(Login).click();
 	}
-
-	public void clickOnAccount() {
+  public void clickOnAccount() {
 		driver.findElement(Account).click();
-		
-	}
-
-	public void clickOnAddress() {
+		}
+  public void clickOnAddress() {
 		driver.findElement(Address).click();
-		
-	}
+		}
 	public void clickOnNewAddress() {
 		driver.findElement(newAddress).click();
-		
-	}
-	
+		}
 	public void enterFirstName() {
 		driver.findElement(FirstName).sendKeys("harini");
-		
-	}
+		}
  public void enterLastName() {
 	 driver.findElement(LastName).sendKeys("v");
  }
@@ -74,8 +64,7 @@ public class UserLogin {
  public void selectCountry() {
 	 Select selection= new Select(driver.findElement(By.id("Address_CountryId")));
 	 selection.selectByIndex(100);
-	 
- }
+	  }
  public void enterCityName() {
 	 driver.findElement(cityName).sendKeys("chennai");
  }
@@ -98,5 +87,4 @@ public class UserLogin {
  public void clickOnLogout() {
 	   driver.findElement(Logout).click();
  }
- 
 }

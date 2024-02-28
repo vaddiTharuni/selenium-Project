@@ -13,8 +13,6 @@ public class Testcase2 {
 		  WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
-		  
-		  
 		  UserLogin ul = new  UserLogin(driver);
 		  ul.clickOnLogin();
 		  ul.enterEmailId("tharunivaddi20@gmail.com");

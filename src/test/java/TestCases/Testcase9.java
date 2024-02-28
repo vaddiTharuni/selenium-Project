@@ -15,12 +15,9 @@ public class Testcase9 {
 	
 	public void productscreenshot() throws IOException, InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
-
 		  WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
-		  
-		  
 		  UserLogin ul = new  UserLogin(driver);
 		  ul.clickOnLogin();
 		  ul.enterEmailId("tharunivaddi20@gmail.com");

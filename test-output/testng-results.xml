@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-25T11:04:15 IST" name="Suite" finished-at="2024-02-25T11:04:38 IST" duration-ms="22517">
+  <suite started-at="2024-02-28T12:17:40 IST" name="Default suite" finished-at="2024-02-28T12:18:08 IST" duration-ms="27976">
     <groups>
     </groups>
-    <test started-at="2024-02-25T11:04:15 IST" name="Test" finished-at="2024-02-25T11:04:38 IST" duration-ms="22517">
-      <class name="TestCases.Testcase1">
-        <test-method signature="register()[pri:0, instance:TestCases.Testcase1@5158b42f]" started-at="2024-02-25T11:04:15 IST" name="register" finished-at="2024-02-25T11:04:38 IST" duration-ms="22426" status="PASS">
+    <test started-at="2024-02-28T12:17:40 IST" name="Default test" finished-at="2024-02-28T12:18:08 IST" duration-ms="27976">
+      <class name="TestCases.Testcase9">
+        <test-method signature="productscreenshot()[pri:0, instance:TestCases.Testcase9@595b007d]" started-at="2024-02-28T12:17:40 IST" name="productscreenshot" finished-at="2024-02-28T12:18:08 IST" duration-ms="27890" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- register -->
-      </class> <!-- TestCases.Testcase1 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- productscreenshot -->
+      </class> <!-- TestCases.Testcase9 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

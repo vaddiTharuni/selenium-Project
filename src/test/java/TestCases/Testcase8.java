@@ -9,9 +9,10 @@ import Main_Project.Selenium_Project.UserLogin;
 
 public class Testcase8 {
 	@Test
-	public void ListTheProduct() {
+	public void ListTheProduct() throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+
 		  WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
@@ -23,9 +24,13 @@ public class Testcase8 {
 		  ul.enterPassword("ab@134");
 		  ul.clickOnLoginButton();
 		
+		ad.searchTheAplleitems();
+		ad.listtheproducts();
+		Thread.sleep(4000);
+		ad.clickOnLogout();
 		
 		  
-		  ad.clickOnElectronics();
-		  ad.productlists();
+		  
+		  
 		  
 }}

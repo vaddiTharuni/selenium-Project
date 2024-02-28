@@ -1,6 +1,7 @@
 package TestCases;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,9 +13,9 @@ import Main_Project.Selenium_Project.UserLogin;
 public class Testcase9 {
 	@Test
 	
-	public void productscreenshot() throws IOException {
-		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64\\chromedriver.exe");
+	public void productscreenshot() throws IOException, InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+
 		  WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
@@ -28,7 +29,13 @@ public class Testcase9 {
 		  AddProducts sc = new AddProducts(driver);
 		  sc.searchtheproduct();
 		 sc.searchtheproduct();
+		 sc.scrollthepage();
+		 Thread.sleep(4000);
 		 sc.screenshot();
+		 Thread.sleep(5000);
+		 sc.clickOnLogout();
+		 
+		 
 		
 	}
 

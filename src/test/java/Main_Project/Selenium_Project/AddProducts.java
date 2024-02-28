@@ -23,15 +23,16 @@ WebDriver driver;
 	By CameraPhoto= By.xpath("//*[text()=' Camera & photo ']");
 	By Leciacamera=By.xpath("//*[text()='Leica T Mirrorless Digital Camera'][1]");
 	By Addcart = By.xpath("//button[@id='add-to-cart-button-16']");
-	By shoppingcart=By.xpath("//span[@class='cart-label']");
 	By cellphone=By.xpath("//*[text()=' Cell phones ']");
 	By NokiaLumia=By.xpath("//*[text()='Nokia Lumia 1020'][1]");
 	By addcart=By.id("add-to-cart-button-20");
+	By shoppingcart= By.xpath("//span[@class='cart-label']");
 	By searchbox = By.id("small-searchterms");
 	By searchbutton = By.xpath("//button[@class='button-1 search-box-button']");
-	By Productlist = By.xpath("//*[text()='Apple']");
 	By Searchproduct= By.xpath("//input[@name='q']");
-
+	By Logout = By.xpath("//a[@class='ico-logout']");
+	
+	
 	
 	
 	
@@ -53,10 +54,7 @@ WebDriver driver;
    public void addItemtocart() {
 	   driver.findElement(Addcart).click();
    }
-   public void verifyOrderaddedOrNot() {
-	   driver.findElement(shoppingcart).getText();
-	    assertEquals("1", shoppingcart);
-   }
+   
   
    public void clickOnCellphone() {
 	   driver.findElement(cellphone).click();
@@ -67,6 +65,14 @@ WebDriver driver;
    public void additemtocart() {
 	   driver.findElement(addcart).click();
    }
+   
+   public void itemAddOrNot() {
+	   driver.findElement(shoppingcart).click(); 
+   }
+   public void scrollthepage() {
+	   JavascriptExecutor js =(JavascriptExecutor)driver;
+	   js.executeScript("window.scrollBy(0,600)");
+   }
    public void searchiteam() {
 	   driver.findElement(searchbox).sendKeys("HP Spectre XT Pro UltraBook");
    }   
@@ -74,13 +80,16 @@ WebDriver driver;
 	   driver.findElement(searchbutton).click();
    }
    
-   public void verifyOrderDetails() {
-	   driver.findElement(shoppingcart).click();
+  
+   public void listtheproducts() {
+	  String apple=driver.findElement(By.xpath("//*[text()='Apple MacBook Pro 13-inch']")).getText();
+	  String appleproduct = driver.findElement(By.xpath("//*[text()='Apple iCam']")).getText();
+	  System.out.println(apple);
+	  System.out.println(appleproduct);
+	  
    }
-   public void productlists() {
-	   driver.findElement(Productlist).getText();
-	   
-   }
+   
+   
    public void searchtheproduct() {
 	   driver.findElement(Searchproduct).sendKeys("Elegant Gemstone Necklace (rental)");
 	   driver.findElement(searchbutton).click();
@@ -93,5 +102,15 @@ WebDriver driver;
 	    File destination= new File("E:\\screenshots\\screenshot.jpeg");
 	    FileHandler.copy(file, destination);
    }
+   public void searchTheAplleitems() {
+	    
+	   driver.findElement(Searchproduct).sendKeys("Apple");
+	   driver.findElement(searchbutton).click();
+   }
+   public void clickOnLogout() {
+	   driver.findElement(Logout).click();
+ }
+   }
+   
 
-}
+

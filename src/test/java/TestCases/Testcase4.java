@@ -1,5 +1,7 @@
 package TestCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -10,8 +12,9 @@ import Main_Project.Selenium_Project.UserLogin;
 public class Testcase4 {
 	@Test
 	
-	public void addCellPhone() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64\\chromedriver.exe");
+	public void addCellPhone() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+
 		  WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
@@ -27,7 +30,10 @@ public class Testcase4 {
 		  AD.clickOnCellphone();
 		  AD.clickOnNokiaLumiaphone();
 		  AD.additemtocart();
-		
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		  AD.itemAddOrNot();
+		  Thread.sleep(5000);
+		  AD.clickOnLogout();
 	}
 
 }

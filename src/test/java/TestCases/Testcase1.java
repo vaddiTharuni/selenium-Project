@@ -8,8 +8,9 @@ import Main_Project.Selenium_Project.UserRegistration;
 
 public class Testcase1 {
 	@Test
-	public void register() {
-		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64\\chromedriver.exe");
+	public void register() throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vadde\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe");
+
 		  WebDriver driver = new ChromeDriver();
 		  driver.get("https://demo.nopcommerce.com/");
 		  driver.manage().window().maximize();
@@ -23,8 +24,9 @@ public class Testcase1 {
 		  ur.enterPassword("ab@134");
 		  ur.enterconformPassword("ab@134");
 		  ur.clickOnRegister();
+		  Thread.sleep(4000);
+		  driver.close();
 		  
-		  driver.quit();
 		  
 
 }
